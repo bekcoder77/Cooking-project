@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: aliceblue;
+  transition: all .3s linear;
+}
+
+.App.night{
+  background-color: rgb(35, 195, 195);
+  color: white;
+}
+.App.night .navbar{
+  background-color: rgb(56, 216, 56);
+
+}
+.navbar {
+  width: 100%;
+  padding: 20px 130px;
+  background-color: #5DA9B2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: all .3s ease;
+}
+
+.navbar button {
+  padding: 8px 15px;
+  background: transparent;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.navbar button:hover {
+  transform: scale(1.1);
+}
+.logo{
+  display: flex;
+  gap: 10px;
+}
+.logo img{
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo h1{
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.link {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.nightMode {
+  width: 100%;
+  padding: 20px 140px;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider{
+  display: flex;
+  gap: 10px;
+ 
+}
+.circle{
+  display: flex;
+  background: red;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.navbar.red{
+  background-color: red;
+}
+.circle:nth-child(2) {
+  background-color: purple;
+}
+
+.circle:nth-child(3) {
+   background-color: orange;
+
+}
+
+.circle:nth-child(4) {
+  background-color: lime;
+}
+
+
+.label {
+  background-color: rgb(0, 42, 100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  padding: 5px;
+  width: 50px;
+  height: 26px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.fa-moon {
+  color: #f1c40f;
+  margin-top: 3px;
+  font-size: 18px;
+}
+.fa-sun {
+  font-size: 19px;
+  color: #f1c40f;
+  margin-top: 3px;
+}
+.ball {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+
+.home {
+  width: 100%;
+  padding: 20px 120px;
+}
+
+.home_boxs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.home_box {
+  width: 350px;
+  height: 270px;
+  background-color: white;
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+  padding: 20px;
+  color: grey;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.home_box .icon{
+  font-size: 22px;
+}
+.home_box:hover {
+  /* filter: drop-shadow(0 0 2em rgb(0, 250, 175)); */
+  transform: translateY(-10px) translateX(0px);
+  cursor: pointer;
+
+}
+
+.home_box:hover .home_btn button {
+  animation: mymove 1.5s linear infinite;
+}
+
+/*! box animation */
+
+.home_box:hover .home_bg{
+  width: 600px;
+  height: 600px;
+  
+}
+
+.home_bg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  display: block;
+  border-radius: 50%;
+  transition: all .8s ease;
+  height: 0;
+  width: 0;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 250, 175);
+  z-index: -1;
+} 
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_box h1 {
+  font-size: 25px;
+}
+
+.home_box p {
+  margin-top: 10px;
+}
+
+.del {
+  cursor: pointer;
+}
