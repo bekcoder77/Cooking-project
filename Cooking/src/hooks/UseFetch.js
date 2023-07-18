@@ -6,6 +6,7 @@ function UseFetch(url) {
   const [error, setError] = useState(null);
   useEffect(() => {
     const getData = async (api) => {
+      setIsPending(true)
       try {
         // loader start
         setIsPending(true);

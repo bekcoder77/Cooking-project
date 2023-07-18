@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-
 function Navbar({ mode, setmode }) {
-
-	const [tema, setTema] = useState(true)
-	// const [tem, setTem] = useState(true)
+  const thema = useRef()
   return (
     <nav>
-      <div className={tema ? "navbar" : "navbar red"}>
-       <div className="logo">
+      <div className="navbar">
+      <Link to="/">
+      <div className="logo">
 	   <h1 >Cooking</h1>
 	   <img src="https://avatars.mds.yandex.net/i?id=3dba1101d7e6fa49f5e0b74f624e16a2d06f49ad-8438673-images-thumbs&n=13" alt="" />
-	   {/* <img src="https://avatars.mds.yandex.net/i?id=612edf3b58ab269c542b8be99c98cbc5e7691e2c-9461059-images-thumbs&n=13" alt="" /> */}
 	   </div>
+      </Link>
       <Link to="/create">
       
       <button>Create</button>
@@ -21,7 +19,7 @@ function Navbar({ mode, setmode }) {
       </div>
       <div className="nightMode">
         <div className="slider">
-          <p onClick={()=>setTema(!tema)} className="circle"></p>
+          <p onClick={()=>HandleClick()} ref={thema} className="circle"></p>
           <p className="circle"></p>
           <p className="circle"></p>
           <p className="circle"></p>
