@@ -3,9 +3,24 @@ import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 function Navbar({ mode, setmode }) {
   const thema = useRef()
+  const handleClick = ()=>{
+    thema.current.classList.toggle("act");
+  }
+  const handleClicke = ()=>{
+    thema.current.classList.toggle("active");
+  }
+  const handleClicked = ()=>{
+    thema.current.classList.toggle("activ");
+  }
+  const Click = ()=>{
+    thema.current.classList.toggle("lima");
+  }
+  const Clicke = ()=>{
+    thema.current.classList.toggle("blue");
+  }
   return (
     <nav>
-      <div className="navbar">
+      <div className="navbar"  ref={thema} >
       <Link to="/">
       <div className="logo">
 	   <h1 >Cooking</h1>
@@ -19,10 +34,11 @@ function Navbar({ mode, setmode }) {
       </div>
       <div className="nightMode">
         <div className="slider">
-          <p onClick={()=>HandleClick()} ref={thema} className="circle"></p>
-          <p className="circle"></p>
-          <p className="circle"></p>
-          <p className="circle"></p>
+          <p onClick={handleClick} className="circle"></p>
+          <p onClick={handleClicke} className="circle"></p>
+          <p onClick={handleClicked} className="circle"></p>
+          <p onClick={Click} className="circle"></p>
+          <p onClick={Clicke} className="circle"></p>
         </div>
 		<div>
           <input

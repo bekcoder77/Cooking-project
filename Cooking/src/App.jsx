@@ -8,17 +8,14 @@ import Create from "./pages/Create";
 
 function App() {
   const [mode, setMode ] = useState(true);
-
-  const LoaderMain = () => {
-    setTimeout(() => {
-      <Loader />;
-    }, 2000);
-  };
-
+  // const LoaderMain = () => {
+  //   setTimeout(() => {
+  //     <Loader />;
+  //   }, 2000);
+  // };
   return (
     <div className={mode ? "App" : "App night"}>
      <BrowserRouter>
-     {LoaderMain()}
      <Navbar mode={mode} setmode={setMode} />
      <Routes>
       <Route path="/" element= { <Home /> }/>

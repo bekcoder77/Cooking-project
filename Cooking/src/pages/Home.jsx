@@ -17,7 +17,6 @@ function Home() {
   return (
     <div className="home">
       <div className="home_boxs">
-        {isPending && <Loader />}
         {data &&
           data.map((item) => {
             return (

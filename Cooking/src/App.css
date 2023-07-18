@@ -62,6 +62,21 @@ a {
   gap: 20px;
   transition: all 0.3s ease;
 }
+.navbar.active{
+  background-color: purple;
+}
+.navbar.act{
+  background-color:red ;
+}
+.navbar.activ{
+  background-color:orange ;
+}
+.navbar.lima{
+  background-color:lime ;
+}
+.navbar.blue{
+  background-color:blue ;
+}
 .navbar button {
   padding: 8px 15px;
   background: transparent;
@@ -102,6 +117,7 @@ a {
 .slider {
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 .circle {
   display: flex;
@@ -123,6 +139,9 @@ a {
 
 .circle:nth-child(4) {
   background-color: lime;
+}
+.circle:nth-child(5) {
+  background-color: blue;
 }
 
 .label {
