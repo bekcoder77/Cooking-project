@@ -3,29 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 
 .App {
   background-color: aliceblue;
-  transition: all .3s linear;
+  transition: all 0.5s ease-in-out;
+  background: url(https://top-fon.com/uploads/posts/2023-02/1675219989_top-fon-com-p-fon-kukhonnii-dlya-prezentatsii-32.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App.night{
+.App.night {
   background-color: rgb(35, 195, 195);
+  background: url(https://avatars.mds.yandex.net/i?id=7e8300e4069a9366d89ee66865ce06baead3bf26-10695933-images-thumbs&n=13);
   color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-.App.night .navbar{
-  background-color: rgb(56, 216, 56);
-
+.App.night .navbar {
+  background-color: rgb(0, 42, 100);
+}
+.App.night .nightMode {
+  background: rgba(255, 255, 255, 0.509);
+}
+.App.night .home_box {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: none;
 }
 .navbar {
   width: 100%;
   padding: 20px 130px;
-  background-color: #5DA9B2;
+  background-color: rgb(29, 211, 156);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar button {
@@ -36,23 +53,23 @@
   color: white;
   border-radius: 9px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar button:hover {
   transform: scale(1.1);
 }
-.logo{
+.logo {
   display: flex;
   gap: 10px;
 }
-.logo img{
-  width: 30px; 
+.logo img {
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
 }
-.logo h1{
+.logo h1 {
   font-size: 28px;
   text-transform: uppercase;
 }
@@ -69,20 +86,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: rgba(250, 243, 243, 0.804);
 }
-.slider{
+.slider {
   display: flex;
   gap: 10px;
- 
 }
-.circle{
+.circle {
   display: flex;
   background: red;
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
-.navbar.red{
+.navbar.red {
   background-color: red;
 }
 .circle:nth-child(2) {
@@ -90,14 +107,12 @@
 }
 
 .circle:nth-child(3) {
-   background-color: orange;
-
+  background-color: orange;
 }
 
 .circle:nth-child(4) {
   background-color: lime;
 }
-
 
 .label {
   background-color: rgb(0, 42, 100);
@@ -142,7 +157,6 @@
   transform: translateX(24px);
 }
 
-
 .home {
   width: 100%;
   padding: 20px 120px;
@@ -151,62 +165,40 @@
 .home_boxs {
   width: 100%;
   display: flex;
+  margin-top: 20px;
   justify-content: space-around;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-
 .home_box {
-  width: 350px;
+  width: 340px;
   height: 270px;
-  background-color: white;
+  background-color: rgb(249, 231, 231);
   box-shadow: 0 0 15px grey;
   border-radius: 10px;
   padding: 20px;
   color: grey;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
-.home_box .icon{
+.home_box .icon {
   font-size: 22px;
 }
 .home_box:hover {
   /* filter: drop-shadow(0 0 2em rgb(0, 250, 175)); */
   transform: translateY(-10px) translateX(0px);
   cursor: pointer;
-
-}
-
-.home_box:hover .home_btn button {
-  animation: mymove 1.5s linear infinite;
 }
 
 /*! box animation */
 
-.home_box:hover .home_bg{
+.home_box:hover .home_bg {
   width: 600px;
   height: 600px;
-  
 }
-
-.home_bg{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  display: block;
-  border-radius: 50%;
-  transition: all .8s ease;
-  height: 0;
-  width: 0;
-  transform: translate(-50%, -50%);
-  background: rgb(0, 250, 175);
-  z-index: -1;
-} 
 
 .title {
   display: flex;
@@ -214,7 +206,14 @@
 }
 
 .home_box h1 {
-  font-size: 25px;
+  font-size: 28px;
+  color: orangered;
+}
+.home_box h3 {
+  margin-top: 10px;
+}
+.home_box p {
+  margin-top: 10px;
 }
 
 .home_box p {

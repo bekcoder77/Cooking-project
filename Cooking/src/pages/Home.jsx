@@ -1,38 +1,52 @@
-import React, { useState } from 'react'
-import UseFetch from '../hooks/UseFetch';
-import {AiTwotoneDelete} from "react-icons/ai"
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import UseFetch from "../hooks/UseFetch";
+import { AiTwotoneDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Home() {
-    const [api, setApi] = useState(" http://localhost:3000/recipes")
-    const { data, isPending, error} = UseFetch(api)
-    console.log(data);
+  const [api, setApi] = useState(" http://localhost:3000/recipes");
+  const { data, isPending, error } = UseFetch(api);
+  console.log(data);
   return (
-    <div className='home'>
-          <div className="home_boxs">
-          {data && data.map((item)=>{
-                return (
-                    <div key={item.id} className="home_box">
-                        <div className="card">
-                            <div className="title">
-                            <h1>{item.title}</h1>
-                            <div className="icon">
-                            <AiTwotoneDelete/>
-                            </div>
-                            </div>
-                            <p >{item.ingredients.map((item,idx) => {
-								return <span key={idx}>{item} {''}</span>
-							})}</p>
-                            	<p>{item.method.substr(0, 100)}...</p>
-                              
-                        </div>
+    <div className="home">
+      <div className="home_boxs">
+        {data &&
+          data.map((item) => {
+            return (
+              <div key={item.id} className="home_box">
+                <div className="card">
+                  <div className="title">
+                    <h1>{item.title}</h1>
+                    <div className="icon">
+                      <AiTwotoneDelete />
                     </div>
-                )
-            })}
-      
-          </div>
+                  </div>
+                  <p  style={{  marginTop:'20px' }}>
+                  <b style={{ color: "black" , fontSize:"18px" }}>Ingredients:</b> 
+
+                    {item.ingredients.map((item, idx) => {
+                        return item +  " , ";
+                    })}
+                  </p>
+                  <p>
+                    <b style={{ color: "black" }}>
+                      Methods : 
+                     </b>
+                    {item.method.slice(0, 125) }
+                  </p>
+                  <h3>
+                    <b style={{ color: "black" }}>
+                      Cooking time:
+                    </b>{" "}
+                    {item.cookingTime}
+                  </h3>
+                </div>
+              </div>
+            );
+          })}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
