@@ -14,6 +14,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-blend-mode: lighten;
+  height: 100%;
 }
 
 .App.night {
@@ -23,6 +25,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 .App.night .navbar {
   background-color: rgb(0, 42, 100);
@@ -42,9 +45,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   transition: all 0.3s ease;
+ 
 }
-
 .navbar button {
   padding: 8px 15px;
   background: transparent;
@@ -173,8 +177,8 @@
 }
 
 .home_box {
-  width: 340px;
-  height: 270px;
+  width: 320px;
+  height: 320px;
   background-color: rgb(249, 231, 231);
   box-shadow: 0 0 15px grey;
   border-radius: 10px;
@@ -184,15 +188,18 @@
   position: relative;
   overflow: hidden;
 }
-.home_box .icon {
-  font-size: 22px;
+.home_box .del{
+  font-size: 24px;
+  transition: all .5s ease-in-out;
+}
+.del:hover{
+  transform: scale(1.1)
 }
 .home_box:hover {
   /* filter: drop-shadow(0 0 2em rgb(0, 250, 175)); */
   transform: translateY(-10px) translateX(0px);
   cursor: pointer;
 }
-
 /*! box animation */
 
 .home_box:hover .home_bg {
@@ -216,10 +223,185 @@
   margin-top: 10px;
 }
 
-.home_box p {
-  margin-top: 10px;
+
+.home_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.del {
+.home_btn button {
+  margin-top: 20px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
   cursor: pointer;
+  background-image: linear-gradient(rgb(44, 93, 241), royalblue);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  color: blue;
+  transition: .5s, color .5s;
+}
+
+.home_btn button:hover {
+  background-size: 100% 100%;
+  color: #fff;
+  filter: drop-shadow( 0 0 2em royalblue);
+}
+
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Recipe */
+.recipe {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe_box {
+  width: 50%;
+  min-height: 300px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+}
+
+.recipe_box h1 {
+  margin-bottom: 10px;
+}
+
+.recipe_box p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-within,:active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+.method{
+  padding: 5px;
+}
+
+/* Create */
+.App.night .create_box p{
+  color: white;
+}
+.App.night .create_box {
+  color: white;
+}
+.create {
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+
+.create_box {
+  width: 450px;
+  padding: 20px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.create h1{
+  font-size: 32px;
+}
+.create_box button {
+  padding: 15px;
+  background-color: purple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form p {
+  font-size: 20px;
+  color: grey;
+  margin-top: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 18px;
+  border: none;
+  /* border: 1px solid purple; */
+  border-radius: 5px;
+  outline: none;
+}
+
+.input_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input_btn input {
+  margin-top: 5px;
+}
+.input_btn button {
+  padding: 12px;
+  margin-top: 3px;
 }
