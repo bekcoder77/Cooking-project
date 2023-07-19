@@ -33,13 +33,15 @@ function Navbar({ mode, setmode }) {
       </Link>
       </div>
       <div className="nightMode">
-        <div className="slider">
+   
+      <div className="slider">
           <p onClick={handleClick} className="circle"></p>
           <p onClick={handleClicke} className="circle"></p>
           <p onClick={handleClicked} className="circle"></p>
           <p onClick={Click} className="circle"></p>
           <p onClick={Clicke} className="circle"></p>
-        </div>
+       </div>
+
 		<div>
           <input
             onClick={() => setmode(!mode)}
@@ -59,6 +61,7 @@ function Navbar({ mode, setmode }) {
             <div className="ball"></div>
           </label>
         </div>
+        
       </div>
     </nav>
   );

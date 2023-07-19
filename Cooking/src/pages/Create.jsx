@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import UseFetch from "../hooks/UseFetch";
 
 function Create() {
   const [title, setTitle] = useState("");
@@ -6,6 +8,8 @@ function Create() {
   const [cookingTime, setCookingTime] = useState("");
   const [ingredient, setIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
+  const navigate = useNavigate()
+
   const reset = () => {
     setTitle("");
     setMethod("");
@@ -16,25 +20,28 @@ function Create() {
     e.preventDefault();
     const obj = {
       title,
-      ingredient,
+      ingredients,
       method,
       cookingTime,
     };
     console.log(obj);
     reset();
+   
+
+
+navigate ("/")
   };
   const handleClick = (e) => {
     e.preventDefault();
 
     if (ingredients.includes(ingredient)) {
-      alert("Siz bu massalliqni kiritgansiz!!!");
+      alert("you always enter this ingredient");
     } else {
       setIngredients((ingredients) => {
         return [...ingredients, ingredient];
       });
     }
-
-    // setIngredient(",");
+    setIngredient("");
   };
   return (
     <div className="create">

@@ -8,12 +8,6 @@ function Home() {
   const [api, setApi] = useState(" http://localhost:3000/recipes");
   const { data, isPending, error } = UseFetch(api);
 
-  const DeleteCard = (id) => {
-    const filtered = data.filter((d) => {
-      return d.id !== id;
-    });
-    setApi(filtered);
-  };
   return (
     <div className="home">
       <div className="home_boxs">
@@ -24,21 +18,20 @@ function Home() {
                 <div className="card">
                   <div className="title">
                     <h1>{item.title}</h1>
-                    <div onClick={() => DeleteCard(item.id)} className="del">
+                    <div  className="del">
                       <FiTrash2 />
                     </div>
                   </div>
                   <p style={{ marginTop: "20px" }}>
-                    <b style={{ color: "black", fontSize: "18px" }}>
-                      Ingredients:
+                    <b>
+                      Ingredients :
                     </b>
-
                     {item.ingredients.map((item, idx) => {
-                      return item + " , ";
+                      return item +  " , ";
                     })}
                   </p>
                   <p>
-                    <b style={{ color: "black" }}>Methods :</b>
+                    <b>Methods :</b>
                     {item.method.slice(0, 125)}
                   </p>
                   <h3
@@ -48,7 +41,7 @@ function Home() {
                       gap: "5px",
                     }}
                   >
-                    <b style={{ color: "black" }}>Cooking time:</b>{" "}
+                    <b>Cooking time :</b>{" "}
                     {item.cookingTime}{" "}
                     <p>
                       <FcAlarmClock />

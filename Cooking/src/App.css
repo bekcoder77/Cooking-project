@@ -10,6 +10,30 @@ a {
   text-decoration: none;
   color: whitesmoke;
 }
+
+.pageNotFound-container {
+text-align: center;
+margin: 0 auto;
+width: 100%;
+height: 100vh;
+z-index: 999;
+font-size: 24px;
+}
+.pageNotFound-container  img{
+  width: 800px;
+  height: 450px;
+  object-fit: cover;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.pageNotFound-container button{
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
 .loader {
   width: 100%;
   height: 100vh;
@@ -26,7 +50,6 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: lighten;
-  padding-bottom: 240px;  
 }
 
 .App.night {
@@ -45,16 +68,23 @@ a {
   background: rgba(255, 255, 255, 0.509);
 }
 .App.night .home_box {
-  background: rgba(255, 255, 255, 0.82);
+  background:rgb(15, 49, 97);
   box-shadow: none;
+  color: white;
 }
 .App.night .home_box h1 {
-  color: rgb(0, 42, 100);
+  color: orange;
 }
+.App.night .home_box b{
+  color: rgb(255, 132, 0);
+}
+
 .navbar {
   width: 100%;
   padding: 15px 130px;
-  background-color: rgb(29, 211, 156);
+  /* background-color: rgba(31, 206, 153, 0.916); */
+  /* background-color: rgba(255, 68, 0, 0.815); */
+  background-color: #c24090e7;
   color: white;
   display: flex;
   align-items: center;
@@ -122,8 +152,8 @@ a {
 .circle {
   display: flex;
   background: red;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 .navbar.red {
@@ -187,57 +217,45 @@ a {
   transform: translateX(24px);
 }
 
-.home {
-  width: 100%;
-  padding: 20px 120px;
-}
-
 .home_boxs {
   width: 100%;
   display: flex;
-  padding: 10px 100px;
+  padding: 20px 100px;
   align-items: center;
+  justify-content: center;
   gap: 40px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
-
 .home_box {
   width: 320px;
   height: 320px;
   background-color: rgb(249, 231, 231);
   box-shadow: 0 0 15px grey;
   border-radius: 10px;
-  padding: 20px;
+  padding:24px 30px;
   color: grey;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  transition: all .3s linear;
 }
-
+.home_box b{
+  font-size: 20px;
+  color: black;
+}
 .home_box .del {
   font-size: 24px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .del:hover {
   transform: scale(1.1);
+  color: black;
 }
-.home_box:hover {
-  /* filter: drop-shadow(0 0 2em rgb(0, 250, 175)); */
-  transform: translateY(-10px) translateX(0px);
-  cursor: pointer;
-}
-/*! box animation */
-
-.home_box:hover .home_bg {
-  width: 600px;
-  height: 600px;
-}
-
 .title {
   display: flex;
   justify-content: space-between;
 }
-
 .home_box h1 {
   font-size: 28px;
   color: orangered;
@@ -248,7 +266,6 @@ a {
 .home_box p {
   margin-top: 10px;
 }
-
 .home_btn {
   width: 100%;
   display: flex;
@@ -274,8 +291,17 @@ a {
 .home_btn button:hover {
   background-size: 100% 100%;
   color: #fff;
-  filter: drop-shadow(0 0 2em royalblue);
+  filter: drop-shadow(0 0 1em royalblue);
+  animation: mymove 1.4s linear infinite;
+
 }
+.home_box:hover {
+  filter: drop-shadow(0 0 1em rgb(86, 110, 103));
+  transform: translateY(-11px) translateX(-6px);
+  cursor: pointer;
+
+}
+
 
 @keyframes mymove {
   0% {
@@ -283,7 +309,7 @@ a {
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(1.07);
   }
 
   100% {
@@ -292,8 +318,16 @@ a {
 }
 
 /* Recipe */
-.App.night .recipe {
-  color: blue;
+.App.night .recipe span {
+  color: white;
+  padding: 5px;
+
+}
+.App.night .recipe_box{
+  background:rgb(15, 49, 97);
+   color: rgb(255, 55, 0);
+
+
 }
 .recipe {
   width: 100%;
@@ -311,14 +345,19 @@ a {
   background-color: white;
   box-shadow: 0 0 15px grey;
   border-radius: 10px;
+  margin-bottom: 235px;
+
 }
 .recipe_box h1 {
   margin-bottom: 10px;
-  /* color: orange; */
 }
 .recipe_box p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.recipe_box span{
+  color: grey;
+  font-size: 18px;
 }
 .btn-donate {
   --clr-font-main: hsla(0 0% 20% / 100);
@@ -368,7 +407,6 @@ a {
 }
 .create {
   width: 100%;
-  /* padding: 10px; */
   justify-content: center;
   display: flex;
 }
@@ -376,6 +414,8 @@ a {
   width: 450px;
   padding: 10px 20px;
   color: rgba(27, 25, 25, 0.564);
+  margin-bottom: 45px;
+
 }
 .create h1 {
   font-size: 42px;
