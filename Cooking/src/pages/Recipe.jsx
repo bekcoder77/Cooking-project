@@ -8,6 +8,12 @@ function Recipe() {
   console.log(data.ingredients);
   return (
     <div className="recipe">
+      {error &&(
+            <h1 className="text" style={{width:"90%",zIndex:'99', position:'absolute',textAlign:'center'}}>
+             <img style={{width:"60%",zIndex:'99',height:"550px"}}  src="https://avatars.mds.yandex.net/i?id=273a76ea9fabf2c19d1432a8042bb64d8a29b9d0-4552862-images-thumbs&n=13" alt="" /> 
+            
+            </h1>
+      ) }
       <div className="recipe_box">
         <h1>{data.title}</h1>
         <h3 style={{  marginTop: "20px", fontSize: "20px" }}>

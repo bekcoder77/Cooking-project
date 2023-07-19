@@ -14,23 +14,17 @@ function App() {
       <Loader />;
     }, 5000);
   };
-
   return (
     <div className={mode ? "App" : "App night"}>
-
      <BrowserRouter>
      <Navbar mode={mode} setmode={setMode} />
-
      <Routes>
       <Route path="/" element= { <Home /> }/>
       <Route path="/create" element= { <Create /> }/>
       <Route path="/recipe/:id" element= { <Recipe /> }/>
       <Route path="*" element= { <PageNotFound /> }/>
      </Routes>
-      {/* <Recipe /> */}
-     
-     
-     </BrowserRouter>
+     </BrowserRouter> 
     </div>
   );
 }

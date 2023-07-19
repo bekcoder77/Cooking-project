@@ -7,7 +7,6 @@ import Loader from "../components/loader/Loader";
 function Home() {
   const [api, setApi] = useState(" http://localhost:3000/recipes");
   const { data, isPending, error } = UseFetch(api);
-
   return (
     <div className="home">
       <div className="home_boxs">

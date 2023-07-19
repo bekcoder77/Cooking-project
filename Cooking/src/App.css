@@ -233,7 +233,7 @@ font-size: 24px;
   background-color: rgb(249, 231, 231);
   box-shadow: 0 0 15px grey;
   border-radius: 10px;
-  padding:24px 30px;
+  padding: 20px 30px;
   color: grey;
   transition: all 0.3s ease;
   position: relative;
@@ -325,7 +325,8 @@ font-size: 24px;
 }
 .App.night .recipe_box{
   background:rgb(15, 49, 97);
-   color: rgb(255, 55, 0);
+  color: rgb(255, 132, 0);
+
 
 
 }
