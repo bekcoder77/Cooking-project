@@ -31,7 +31,7 @@ function Home() {
                   </p>
                   <p>
                     <b>Methods :</b>
-                    {item.method.slice(0, 125)}
+                    {item.method.slice(0, 120)}
                   </p>
                   <h3
                     style={{

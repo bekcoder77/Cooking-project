@@ -14,6 +14,7 @@ function App() {
       <Loader />;
     }, 5000);
   };
+  
   return (
     <div className={mode ? "App" : "App night"}>
      <BrowserRouter>

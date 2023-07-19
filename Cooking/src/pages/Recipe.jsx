@@ -19,9 +19,7 @@ function Recipe() {
         <h3 style={{  marginTop: "20px", fontSize: "20px" }}>
         Ingredients :
           <span> {data.ingredients + ","} :</span>
-         
         </h3>
-        
         <h3 style={{ marginTop: "20px", fontSize: "20px" }}>
           Cooking time :<span> {data.cookingTime}</span>
         </h3>

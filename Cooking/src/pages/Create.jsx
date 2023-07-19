@@ -9,14 +9,13 @@ function Create() {
   const [ingredient, setIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const navigate = useNavigate();
-
   const reset = () => {
     setTitle("");
     setMethod("");
     setCookingTime("");
     setIngredient("");
   };
-  
+  // Submit
   const handleSubmit = (e) => {
     e.preventDefault();
     const obj = {
@@ -24,8 +23,10 @@ function Create() {
       ingredients,
       method,
       cookingTime,
+      
     };
     console.log(obj);
+    
     reset();
     navigate("/");
   };
