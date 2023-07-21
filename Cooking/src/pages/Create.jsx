@@ -19,14 +19,14 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const obj = {
+      id: Math.round(Math.random() * 1000 + 10),
       title,
       ingredients,
       method,
-      cookingTime,
-      
+      cookingTime: cookingTime + " minutes",
     };
     console.log(obj);
-    
+
     reset();
     navigate("/");
   };
@@ -49,6 +49,7 @@ function Create() {
         <form onSubmit={handleSubmit}>
           <p>Title:</p>
           <input
+            required
             value={title}
             onChange={(e) => {
               setTitle(e.target.value);
@@ -74,6 +75,7 @@ function Create() {
           </h3>
           <p>Methods :</p>
           <input
+            required
             type="text"
             value={method}
             onChange={(e) => {
@@ -82,13 +84,14 @@ function Create() {
           />
           <p>CookingTime:</p>
           <input
+            required
             type="text"
             value={cookingTime}
             onChange={(e) => {
               setCookingTime(e.target.value);
             }}
           />
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>

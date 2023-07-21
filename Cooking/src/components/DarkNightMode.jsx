@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 function DarkNightMode({ mode, setmode, setNavColor }) {
-  const colors = [ "#c24090e7","red", "blue", "orange", "green"];
+  const colors = [ "red", "blue", "purple", "orange", "green"];
   return (
     <div>
       <div className="mode">

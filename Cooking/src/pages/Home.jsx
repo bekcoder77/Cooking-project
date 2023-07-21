@@ -17,17 +17,13 @@ function Home() {
                 <div className="card">
                   <div className="title">
                     <h1>{item.title}</h1>
-                    <div  className="del">
+                    <div className="del">
                       <FiTrash2 />
                     </div>
                   </div>
                   <p style={{ marginTop: "20px" }}>
-                    <b>
-                      Ingredients :
-                    </b>
-                    {item.ingredients.map((item, idx) => {
-                      return item +  " , ";
-                    })}
+                    <b>Ingredients :</b>
+                     {item.ingredients[0] }  {item.ingredients[2]} {item.ingredients[3]} ......
                   </p>
                   <p>
                     <b>Methods :</b>
@@ -40,8 +36,7 @@ function Home() {
                       gap: "5px",
                     }}
                   >
-                    <b>Cooking time :</b>{" "}
-                    {item.cookingTime}{" "}
+                    <b>Cooking time :</b> {item.cookingTime}{" "}
                     <p>
                       <FcAlarmClock />
                     </p>
