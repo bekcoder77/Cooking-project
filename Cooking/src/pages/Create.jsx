@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import UseFetch from "../hooks/UseFetch";
 
 function Create() {
+
+  const { data, isPending, error, addNewData } = UseFetch(
+    " http://localhost:3000/recipes",
+    "POST"
+  );
+
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
   const [cookingTime, setCookingTime] = useState("");
@@ -25,10 +31,10 @@ function Create() {
       method,
       cookingTime: cookingTime + " minutes",
     };
-    console.log(obj);
+    addNewData(obj);
 
     reset();
-    navigate("/");
+    // navigate("/");
   };
   const handleClick = (e) => {
     e.preventDefault();
