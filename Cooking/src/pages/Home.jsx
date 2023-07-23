@@ -18,6 +18,8 @@ function Home() {
                 <div className="card">
                   <div className="title">
                     <h1>{item.title}</h1>
+
+                    {/* Delete */}
                     <div className="del">
                       <FiTrash2 />
                     </div>

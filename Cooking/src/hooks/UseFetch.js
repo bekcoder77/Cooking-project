@@ -44,7 +44,7 @@ function UseFetch(url,method = "GET") {
                   fetchData(options);
               }
   }, [url, method, options]);
-  return { data, isPending, error,addNewData };
+  return { data,setData, isPending, error,addNewData };
 }
 
 export default UseFetch;

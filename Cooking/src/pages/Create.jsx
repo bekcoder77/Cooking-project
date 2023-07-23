@@ -34,7 +34,7 @@ function Create() {
     addNewData(obj);
 
     reset();
-    // navigate("/");
+    navigate("/");
   };
   const handleClick = (e) => {
     e.preventDefault();
