@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { Context } from "./context/ThemeContext";
+function DarkNightMode({ setNavColor }) {
 
-function DarkNightMode({ mode, setmode, setNavColor }) {
-  const colors = [ "red", "blue", "purple", "orange", "green"];
+  const { color, changeNavColor } = useContext(Context);
+  const { mode, changeMode } = useContext(Context);
+
   return (
     <div>
       <div className="mode">
-        <div className="slider">
-          {colors.map((item,idx) => {
-            return (
-              <div key={idx}
-                onClick={() => {
-                  setNavColor(item);
-                }}
-                style={{ backgroundColor: item }}
-                className="circle"
-              ></div>
-            );
-          })}
+        <div className="changeThems">
+          <div
+            onClick={() => {
+              changeNavColor("red");
+            }}
+          ></div>
+          <div
+            onClick={() => {
+              changeNavColor("blue");
+            }}
+          ></div>
+
+          <div
+            onClick={() => {
+              changeNavColor("purple");
+            }}
+          ></div>
+          <div
+            onClick={() => {
+              changeNavColor("orange");
+            }}
+          ></div>
+          <div
+            onClick={() => {
+              changeNavColor("lime");
+            }}
+          ></div>
         </div>
 
         <div>
           <input
-            onClick={() => setmode(!mode)}
+            onClick={() => changeMode(mode ? false : true)}
             type="checkbox"
             className="checkbox"
             id="checkbox"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -7,17 +7,20 @@ import Home from "./pages/Home";
 import Create from "./pages/Create";
 import PageNotFound from "./pages/PageNotFound";
 import DarkNightMode from "./components/DarkNightMode";
+import { Context } from "./components/context/ThemeContext";
 
 function App() {
-  const [mode, setMode] = useState(true);
+  // const [mode, setMode] = useState(true);
   const [navColor, setNavColor] = useState("#c24090e7");
+
+  const { mode, changeMode } = useContext(Context);
+
+
   return (
-    <div className={mode ? "App" : "App night"}>
+    <div className={`${mode ? "App" : "App night"}`}>
       <BrowserRouter>
-        <Navbar navColor={navColor} />
+        <Navbar  navColor={navColor}/> 
         <DarkNightMode
-          mode={mode}
-          setmode={setMode}
           setNavColor={setNavColor}
         />
         <Routes>

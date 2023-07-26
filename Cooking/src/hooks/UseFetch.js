@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 
 function UseFetch(url,method = "GET") {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null)
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
     const [options, setOptions] = useState(null);
-
-
-
     const addNewData = (recipe) => {
         console.log(recipe);
         setOptions({
@@ -18,8 +15,6 @@ function UseFetch(url,method = "GET") {
             body: JSON.stringify(recipe),
         });
     }; 
-
-
   useEffect(() => {
     const fetchData = async (fetchConfig) => {
                   setIsPending(true);

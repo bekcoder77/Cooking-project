@@ -69,6 +69,7 @@ a {
 }
 .navbar {
   width: 100%;
+  background-color: #c24090b3;
   padding: 15px 130px;
   display: flex;
   align-items: center;
@@ -121,18 +122,38 @@ a {
     padding: 20px 40px;
   }
 }
-.slider {
+
+/* Change Theme */
+.changeThems {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
+}
+
+.changeThems div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
   cursor: pointer;
 }
-.circle {
-  display: flex;
-  background: red;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+
+.changeThems div:nth-child(1) {
+  background-color: red;
 }
+.changeThems div:nth-child(2) {
+  background-color: blue;
+}
+.changeThems div:nth-child(3) {
+  background-color: purple;
+}
+.changeThems div:nth-child(4) {
+  background-color: orange;
+}
+
+.changeThems div:nth-child(5) {
+  background-color: lime;
+}
+
 
 .label {
   background-color: rgb(0, 42, 100);

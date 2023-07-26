@@ -48,7 +48,7 @@
         "Go'sht"
       ],
       "method": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
-      "cookingTime": "60 minutes",
+      "cookingTime": "60",
       "id": "5lnsjuz"
     },
     {
@@ -62,7 +62,7 @@
         "Yog'"
       ],
       "method": "Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus.",
-      "cookingTime": "50 minutes",
+      "cookingTime": "50",
       "id": "1Pot1pa"
     },
     {
@@ -76,38 +76,95 @@
         "Suv"
       ],
       "method": "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.",
-      "cookingTime": "120 minutes",
+      "cookingTime": "120",
       "id": "4Vvj4aS"
     },
     {
-      "id": 389,
-      "title": "sdcwaEFD",
+      "id": 912,
+      "title": "assfgr",
       "ingredients": [],
-      "method": "SAFDVG",
-      "cookingTime": "ASDFG minutes"
+      "method": "sdfg",
+      "cookingTime": "sfdag minutes"
     },
     {
-      "id": 565,
-      "title": "lawash",
+      "id": 98,
+      "title": "awodujrf",
       "ingredients": [
-        "afsfing",
         "asdf",
-        "asfdfd"
+        "asfdg",
+        "awdf",
+        "asfgr"
       ],
-      "method": "asdJFBEF",
+      "method": "asdjhboalasjfhj",
       "cookingTime": "45 minutes"
     },
     {
-      "id": 285,
-      "title": "pizza ",
+      "id": 753,
+      "title": "apwi'b;hfiaehrf",
       "ingredients": [
-        "",
-        "gpsht",
-        "saaD",
-        "ADFD"
+        "awrerf",
+        "sragf",
+        "sfdag"
       ],
-      "method": "ASDFVGASD",
-      "cookingTime": "20 minutes"
+      "method": "asfwvjhbfd",
+      "cookingTime": "45 minutes"
+    },
+    {
+      "id": 85,
+      "title": "lawash",
+      "ingredients": [
+        "asdpd",
+        "aswdfd",
+        "asfg",
+        "asfdg"
+      ],
+      "method": "awdsfkn",
+      "cookingTime": "48 minutes"
+    },
+    {
+      "id": 468,
+      "title": "donar pizza ",
+      "ingredients": [
+        "gosht ",
+        "asdjbasd",
+        "sdf",
+        "asdf",
+        ""
+      ],
+      "method": "asdf",
+      "cookingTime": "asdf minutes"
+    },
+    {
+      "id": 417,
+      "title": "khvqwsd",
+      "ingredients": [],
+      "method": "saD",
+      "cookingTime": "Asdx minutes"
+    },
+    {
+      "id": 789,
+      "title": "palov",
+      "ingredients": [],
+      "method": "asdfvgdasefg",
+      "cookingTime": "dsfsdg minutes"
+    },
+    {
+      "id": 362,
+      "title": "aeds",
+      "ingredients": [],
+      "method": "asD",
+      "cookingTime": "ASDF minutes"
+    },
+    {
+      "id": 445,
+      "title": "wEFRER",
+      "ingredients": [
+        "AERDG",
+        "WEEWAR",
+        "AEWRTRET"
+      ],
+      "method": "EWRRPIFHU9EWHFER",
+      "cookingTime": "45 minutes"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UseFetch from "../hooks/UseFetch";
 
@@ -14,6 +14,7 @@ function Create() {
   const [cookingTime, setCookingTime] = useState("");
   const [ingredient, setIngredient] = useState("");
   const [ingredients, setIngredients] = useState([]);
+
   const navigate = useNavigate();
   const reset = () => {
     setTitle("");
@@ -21,6 +22,16 @@ function Create() {
     setCookingTime("");
     setIngredient("");
   };
+
+
+  useEffect(()=>{
+
+if(data){
+  navigate("/")
+}
+  },[data,navigate])
+
+
   // Submit
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,9 +43,9 @@ function Create() {
       cookingTime: cookingTime + " minutes",
     };
     addNewData(obj);
-
+    console.log(obj);
     reset();
-    navigate("/");
+    // navigate("/");
   };
   const handleClick = (e) => {
     e.preventDefault();

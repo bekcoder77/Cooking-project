@@ -1,10 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-function Navbar({navColor}) {
+import { Context } from "./context/ThemeContext";
+
+function Navbar() {
+  const {color,changeNavColor} = useContext(Context)
+
   return (
     <nav>
-      <div style={{backgroundColor:navColor}} className="navbar">
+      <div style={{backgroundColor:color}} className="navbar">
         <Link to="/">
           <div className="logo">
             <h1>Cooking</h1>
