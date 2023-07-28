@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+  z-index: 999;
+  margin-bottom: 400px;
+}
+.ring {
+  width: 300px;
+  height: 300px;
+  border: 12px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.ring:nth-child(1) {
+  border-bottom-color: #e74c3c;
+  animation-name: rotate1;
+}
+
+.ring:nth-child(2) {
+  border-right-color: #3498db;
+  animation-name: rotate2;
+}
+
+.ring:nth-child(3) {
+  border-top-color: #2ecc71;
+  animation-name: rotate3;
+}
+
+.ring:nth-child(4) {
+  border-left-color: #f39c12;
+  animation-name: rotate4;
+}
+
+.ring:nth-child(5) {
+  border-bottom-color: #9b59b6;
+  animation-name: rotate5;
+}
+.loading {
+  color: #000000;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 34px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation-name: textBlink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(360deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-360deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(360deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes rotate4 {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-360deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes rotate5 {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(360deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes textBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.pageNotFound-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  font-size: 24px;
+}
+.pageNotFound-container img {
+  width: 800px;
+  height: 450px;
+  object-fit: cover;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.pageNotFound-container button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.App {
+  transition: all 0.5s ease-in-out;
+  background: url(https://top-fon.com/uploads/posts/2023-02/1675219989_top-fon-com-p-fon-kukhonnii-dlya-prezentatsii-32.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+.App.night {
+  background-color: rgb(35, 195, 195);
+  background: url(https://avatars.mds.yandex.net/i?id=7e8300e4069a9366d89ee66865ce06baead3bf26-10695933-images-thumbs&n=13);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+.App.night .navbar {
+  background-color: rgb(0, 42, 100);
+}
+.App.night .mode {
+  background: rgba(255, 255, 255, 0.509);
+}
+.App.night .home_box {
+  background: rgb(15, 49, 97);
+  box-shadow: none;
+  color: white;
+}
+.App.night .home_box h1 {
+  color: orange;
+}
+.App.night .home_box b {
+  color: rgb(255, 132, 0);
+}
+.navbar {
+  width: 100%;
+  background-color: #c24090b3;
+  padding: 15px 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.circle {
+  display: flex;
+  background: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.navbar button {
+  padding: 7px 15px;
+  background: transparent;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar button:hover {
+  transform: scale(1.1);
+}
+.logo {
+  display: flex;
+  gap: 10px;
+}
+.logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.mode {
+  width: 100%;
+  padding: 20px 140px;
+  gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(250, 243, 243, 0.804);
+}
+@media (max-width: 768px) {
+  .mode {
+    padding: 20px 40px;
+  }
+}
+
+/* Change Theme */
+.changeThems {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.changeThems div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.label {
+  background-color: rgb(0, 42, 100);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  padding: 4px;
+  width: 52px;
+  height: 28px;
+  transform: scale(1.1);
+  cursor: pointer;
+  gap: 8px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.fa-moon,
+.fa-sun {
+  color: #f1c40f;
+  margin-top: 3px;
+  font-size: 18px;
+}
+.fa-moon {
+  font-size: 16px;
+}
+.ball {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.home_boxs {
+  width: 100%;
+  display: flex;
+  padding: 20px 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .home_boxs {
+    padding: 10px 40px;
+  }
+}
+.home_box {
+  width: 320px;
+  min-height: 320px;
+  background-color: rgb(249, 231, 231);
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+  padding: 20px 30px;
+  color: grey;
+  transition: all 0.3s ease;
+  transition: all 0.3s linear;
+  margin-bottom: 300px;
+
+}
+.home_box:hover {
+  filter: drop-shadow(0 0 1em rgb(86, 110, 103));
+  transform: translateY(-11px) translateX(-6px);
+  cursor: pointer;
+}
+.home_box b {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+.home_box b:hover {
+  color: rgb(193, 7, 214);
+}
+.home_box .del {
+  font-size: 24px;
+  transition: all 0.4s ease-in-out;
+}
+ .App.night .del:hover {
+  color: paleturquoise;
+}
+.del:hover {
+  transform: scale(1.1);
+  color: black;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.home_box h1 {
+  font-size: 28px;
+  color: orangered;
+  transition: all 0.3s ease-in-out;
+}
+.home_box h1:hover {
+  font-size: 28px;
+  color: rgb(0, 85, 255);
+}
+.home_box h3 {
+  margin-top: 10px;
+}
+.home_box p {
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.home_btn {
+  display: flex;
+  justify-content: center;
+}
+.home_btn button {
+  margin-top: 20px;
+  padding: 4px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(rgb(44, 93, 241), royalblue);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: 0.3s, color 0.1s;
+  color: blue;
+}
+.home_btn button:hover {
+  background-size: 100% 100%;
+  color: #fff;
+  filter: drop-shadow(0 0 1em royalblue);
+  animation: mymove 1.4s linear infinite;
+}
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+/* Recipe */
+
+.App.night .recipe span {
+  color: white;
+  padding: 5px;
+}
+.App.night .recipe_box {
+  background: rgb(15, 49, 97);
+  color: rgb(255, 132, 0);
+}
+.recipe {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.recipe_box {
+  width: 50%;
+  min-height: 300px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px grey;
+  border-radius: 10px;
+  margin-bottom: 235px;
+}
+@media (max-width: 768px) {
+  .recipe_box {
+    width: 80%;
+  }
+}
+.recipe_box h1 {
+  margin-bottom: 10px;
+}
+.recipe_box p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.recipe_box span {
+  color: grey;
+  font-size: 18px;
+}
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+.btn-donate:hover {
+  background-position: right top;
+}
+/* 
+.btn-donate:is(:focus, :focus-within, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+} */
+
+/* Create */
+
+.App.night .create_box p {
+  color: white;
+}
+.App.night .create_box {
+  color: white;
+}
+.create {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.create_box {
+  width: 450px;
+  padding: 10px 20px;
+  color: rgba(27, 25, 25, 0.564);
+  margin-bottom: 45px;
+}
+.create h1 {
+  font-size: 42px;
+}
+.create_box button {
+  padding: 15px;
+  background-color: purple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+form p {
+  font-size: 22px;
+  color: rgb(67, 65, 65);
+  margin-top: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form input {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 18px;
+  border: none;
+  border: 2px solid purple;
+  border-radius: 5px;
+  outline: none;
+}
+.input_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.input_btn input {
+  margin-top: 5px;
+}
+.input_btn button {
+  padding: 12px;
+  margin-top: 3px;
+}
